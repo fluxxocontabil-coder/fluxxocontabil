@@ -109,11 +109,11 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
 }
-/* ---------------- SEÇÃO NOSSOS SERVIÇOS ---------------- */
+/* ---------------- SEÇÃO SERVIÇOS ---------------- */
 #servicos {
     width: 100%;
-    padding: 100px 8%;
-    background-color: #03132B; /* Mantém o fundo escuro integrado */
+    padding: 80px 8%;
+    background-color: #03132B;
 }
 
 #servicos h2 {
@@ -122,10 +122,9 @@ body {
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 50px;
-    letter-spacing: -0.5px;
 }
 
-/* Container que organiza os Cards em Grade */
+/* Container dos Cards */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -133,66 +132,103 @@ body {
     justify-content: center;
 }
 
-/* Estilo do Card Individual */
+/* Estilo Base do Card */
 .card {
-    background-color: #0A1F3D; /* Azul levemente mais claro que o fundo para dar destaque */
-    border: 1px solid rgba(56, 189, 248, 0.15); /* Borda sutil azulada */
-    border-radius: 12px;
-    padding: 30px;
-    flex: 1 1 calc(50% - 25px); /* Exibe 2 cards por linha em telas médias e grandes */
-    min-width: 280px;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #082247; /* Azul encorpado exatamente como na imagem */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 35px 28px;
+    flex: 1 1 calc(25% - 25px); /* Exibe até 4 cards por linha em telas bem grandes */
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse por cima do Card */
 .card:hover {
     transform: translateY(-5px);
-    border-color: #38BDF8; /* Ilumina a borda em azul claro */
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.4);
 }
 
+/* Caixa do Ícone */
+.card-icon {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(56, 189, 248, 0.12); /* Fundo sutil do ícone */
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.card-icon i {
+    color: #38BDF8; /* Cor do ícone em azul brilhante */
+    width: 26px;
+    height: 26px;
+}
+
+/* Textos do Card */
 .card h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #38BDF8; /* Título no tom azul brilhante */
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #FFFFFF;
     margin-bottom: 12px;
 }
 
 .card p {
-    font-size: 0.95rem;
-    color: #94A3B8; /* Texto explicativo suavizado */
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #94A3B8;
     line-height: 1.5;
+    margin-bottom: 24px;
 }
 
-/* Estilo da Lista dentro do Card */
+/* Lista com o Check ✓ */
 .card ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
 .card ul li {
-    font-size: 0.9rem;
-    color: #E2E8F0;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
+    font-size: 0.88rem;
+    color: #CBD5E1;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Marcador personalizado para os itens da lista */
-.card ul li::before {
-    content: "•";
-    color: #38BDF8; /* Ponto da lista em azul claro */
+.card ul li span {
+    color: #818CF8; /* Cor azul/roxo do Check */
     font-weight: bold;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: -2px;
 }
 
-/* Responsividade para Celulares */
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 100%; /* Ocupa a largura total no celular */
-    }
+/* Botão Verde do WhatsApp */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #22C55E; /* Verde vibrante igual à imagem */
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+}
+
+.btn-whatsapp:hover {
+    background-color: #16A34A;
+    transform: scale(1.02);
+}
+
+.btn-whatsapp i {
+    width: 18px;
+    height: 18px;
 }

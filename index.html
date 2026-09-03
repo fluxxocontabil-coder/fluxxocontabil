@@ -4,16 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fluxxo Contábil</title>
-         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/lucide@latest"></script>
     </head>
     <body>
 
-        <h1>Bem vindo a Fluxxo Contábil</h1>
-        <p>Este é o site oficial da Fluxxo Contábil, oferecendo serviços de contabilidade e consultoria financeira.</p>
-    <header>
         <header class="header">
         <div class="logo">
             <span class="logo-text">Fluxxo Contábil</span>
@@ -29,8 +27,9 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
+        <h1 class="welcome-title">Bem vindo à Fluxxo Contábil</h1>
         <h2>Simplificando a gestão financeira da sua empresa</h2>
-        <p>Oferecemos suporte contábil completo para micro e pequenas empresas</p>
+        <p>Oferecemos suporte contábil completo para micro e pequenas empresas.</p>
         <a href="#contato" class="btn-primary">Fale com nossa Contadora Amanda</a>
         </div>
     </section>
@@ -47,17 +46,26 @@
         <h2>Nossos Serviços</h2>
         <div class="cards-container">
             <div class="card">
+            <div class="card-icon">
+                <i data-lucide="building-2"></i>
+            </div>
                 <h3>Abertura e Regularização</h3>
                 <p>Cuidamos de toda a burocracia para formalizar ou regularizar sua empresa com agilidade.</p>
                 <ul>
-                    <li>Abertura de empresas (MEI. ME, EPP)</li>
-                    <li>Alteração contratual e atualização de dados</li>
-                    <li>Inscrição Municipal, Estadual e emissão de Licenças</li>
-                    <li>Regularização de pendências fiscais e cadastrais</li>
-                 </ul>
+                    <li><span>✓</span> Abertura de empresas (MEI, ME, EPP)</li>
+                    <li><span>✓</span> Alteração contratual e atualização de dados</li>
+                    <li><span>✓</span> Inscrição Municipal, Estadual e emissão de Licenças</li>
+                    <li><span>✓</span> Regularização de pendências fiscais e cadastrais</li>
+                </ul>
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    <i data-lucide="message-circle"></i> Saiba Mais
+                </a>
             </div>
 
         <div class="card">
+            <div class="card-icon">
+                <i data-lucide="calculator"></i>
+            </div>
             <h3>Gestão Fiscal e Tributária</h3>
             <p>Garantimos a conformidade fiscal e a otimização de impostos do seu negócio.</p>
             <ul>
@@ -66,9 +74,15 @@
                 <li>Entrega de obrigações acessórias junto à Receita Federal</li>
                 <li>Orientação para emissão correta de Notas Fiscais</li>
             </ul>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                <i data-lucide="message-circle"></i> Saiba Mais
+            </a>
         </div>
 
         <div class="card">
+            <div class="card-icon">
+                <i data-lucide="users"></i>
+            </div>
             <h3>Gestão do Departamento Pessoal</h3>
             <p>Cuidamos de todas as rotinas trabalhistas e obrigações da sua equipe com precisão.</p>
             <ul>
@@ -77,9 +91,14 @@
                 <li>Cálculo de férias. 13° salário e rescisões</li>
                 <li>Envio das obrigações ao Esocial, FGTS e INSS</li>
             </ul>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                <i data-lucide="message-circle"></i> Saiba Mais
+            </a>
         </div>
 
         <div class="card">
+            <div class="card-icon">
+                <i data-lucide="file-text"></i>
             <h3>Licenciamento e Certidões</h3>
             <p>Gestão Contínua para manter a documentação da empresa válida e apta para operar.</p>
             <ul>
@@ -88,6 +107,9 @@
                 <li>Cadastramento e atualização em órgãos de classe e conselhos</li>
                 <li>Acompanhamento de possíveis fiscalizações de órgãos públicos</li>
             </ul>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                <i data-lucide="message-circle"></i> Saiba Mais
+            </a>
         </div>
     </section>
     
@@ -95,7 +117,12 @@
         <h2>Entre em contato</h2>
         <p>Fale diretamente com a Contadora Amanda ou com uma de nossas especialistas</p>
         <form action="#" 
-
-
     </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</header>
+
     </html>
