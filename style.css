@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #03132B; /* Azul-marinho muito escuro da imagem */
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #03132B; /* Mesma cor do fundo para integração perfeita */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    }
+    /* Logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+/* Menu de Navegação */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav ul li a {
+    color: #8C9CAE;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    color: #38BDF8;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px 20px;
+    background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: #94A3B8;
+    margin-bottom: 36px;
+    font-weight: 400;
+}
+
+/* Botão Principal */
+.btn-primary {
+    display: inline-block;
+    background-color: #38BDF8;
+    color: #03132B;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+/* ---------------- SEÇÃO NOSSOS SERVIÇOS ---------------- */
+#servicos {
+    width: 100%;
+    padding: 100px 8%;
+    background-color: #03132B; /* Mantém o fundo escuro integrado */
+}
+
+#servicos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+/* Container que organiza os Cards em Grade */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Estilo do Card Individual */
+.card {
+    background-color: #0A1F3D; /* Azul levemente mais claro que o fundo para dar destaque */
+    border: 1px solid rgba(56, 189, 248, 0.15); /* Borda sutil azulada */
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1 1 calc(50% - 25px); /* Exibe 2 cards por linha em telas médias e grandes */
+    min-width: 280px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse por cima do Card */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38BDF8; /* Ilumina a borda em azul claro */
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #38BDF8; /* Título no tom azul brilhante */
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #94A3B8; /* Texto explicativo suavizado */
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Estilo da Lista dentro do Card */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    font-size: 0.9rem;
+    color: #E2E8F0;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Marcador personalizado para os itens da lista */
+.card ul li::before {
+    content: "•";
+    color: #38BDF8; /* Ponto da lista em azul claro */
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* Ocupa a largura total no celular */
+    }
+}

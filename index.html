@@ -4,26 +4,35 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fluxxo Contábil</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
         <h1>Bem vindo a Fluxxo Contábil</h1>
         <p>Este é o site oficial da Fluxxo Contábil, oferecendo serviços de contabilidade e consultoria financeira.</p>
     <header>
+        <header class="header">
         <div class="logo">
-            <h1>Exemplo contabilidade</h1>
+            <span class="logo-text">Fluxxo Contábil</span>
         </div>
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="#inicio">Início</a></li>
+                <li><a href="#inicio">Home<li>
                 <li><a href="#sobre">Sobre nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
             </ul>
         </nav>
     </header>
-    <section id="inicio">
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
         <h2>Simplificando a gestão financeira da sua empresa</h2>
         <p>Oferecemos suporte contábil completo para micro e pequenas empresas</p>
-        <a href="#contato">Fale com nossa Contadora Amanda</a>
+        <a href="#contato" class="btn-primary">Fale com nossa Contadora Amanda</a>
+        </div>
     </section>
 
     <section id="sobre">
@@ -36,16 +45,17 @@
 
     <section id="servicos">
         <h2>Nossos Serviços</h2>
-        <div class="card">
-            <h3>Abertura e Regularização</h3>
-            <p>Cuidamos de toda a burocracia para formalizar ou regularizar sua empresa com agilidade.</p>
-            <ul>
-                <li>Abertura de empresas (MEI. ME, EPP)</li>
-                <li>Alteração contratual e atualização de dados</li>
-                <li>Inscrição Municipal, Estadual e emissão de Licenças</li>
-                <li>Regularização de pendências fiscais e cadastrais</li>
-            </ul>
-        </div>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Abertura e Regularização</h3>
+                <p>Cuidamos de toda a burocracia para formalizar ou regularizar sua empresa com agilidade.</p>
+                <ul>
+                    <li>Abertura de empresas (MEI. ME, EPP)</li>
+                    <li>Alteração contratual e atualização de dados</li>
+                    <li>Inscrição Municipal, Estadual e emissão de Licenças</li>
+                    <li>Regularização de pendências fiscais e cadastrais</li>
+                 </ul>
+            </div>
 
         <div class="card">
             <h3>Gestão Fiscal e Tributária</h3>
