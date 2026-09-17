@@ -1,3 +1,17 @@
+:root {
+    --bg: #1a0b2e;
+    --bg-alt: #150823;
+    --card-bg: #2a1245;
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #a855f7;
+    --accent-hover: #9333ea;
+    --accent-soft: rgba(168, 85, 247, 0.12);
+    --text-primary: #FFFFFF;
+    --text-secondary: #b9a9cf;
+    --whatsapp: #22C55E;
+    --whatsapp-hover: #16A34A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +19,21 @@
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #03132B; /* Azul-marinho muito escuro da imagem */
-    color: #FFFFFF;
+    background-color: var(--bg);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
+section {
+    scroll-margin-top: 80px;
+}
+
+/* ---------------- HEADER ---------------- */
 .header {
     width: 100%;
     height: 80px;
@@ -18,13 +41,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #03132B; /* Mesma cor do fundo para integração perfeita */
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    }
-    /* Logotipo */
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -34,10 +58,9 @@ body {
 .logo-text {
     font-weight: 700;
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color: var(--text-primary);
 }
 
-/* Menu de Navegação */
 .nav ul {
     display: flex;
     list-style: none;
@@ -45,7 +68,7 @@ body {
 }
 
 .nav ul li a {
-    color: #8C9CAE;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
@@ -54,10 +77,10 @@ body {
 
 .nav ul li a:hover,
 .nav ul li a.active {
-    color: #38BDF8;
+    color: var(--accent);
 }
 
-/* Hero Section */
+/* ---------------- HERO ---------------- */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -66,7 +89,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 120px 20px 60px 20px;
-    background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
@@ -78,14 +101,21 @@ body {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #FFFFFF;
-    margin-bottom: 24px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
     letter-spacing: -0.5px;
+}
+
+.hero-content h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 1.15rem;
-    color: #94A3B8;
+    color: var(--text-secondary);
     margin-bottom: 36px;
     font-weight: 400;
 }
@@ -93,38 +123,145 @@ body {
 /* Botão Principal */
 .btn-primary {
     display: inline-block;
-    background-color: #38BDF8;
-    color: #03132B;
+    background-color: var(--accent);
+    color: #FFFFFF;
     font-weight: 600;
     font-size: 0.95rem;
     padding: 14px 32px;
+    border: none;
     border-radius: 8px;
     text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: #0ea5e9;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-}
-/* ---------------- SEÇÃO SERVIÇOS ---------------- */
-#servicos {
-    width: 100%;
-    padding: 80px 8%;
-    background-color: #03132B;
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45);
 }
 
-#servicos h2 {
+/* ---------------- BANNER DE PÁGINA INTERNA ---------------- */
+.page-header {
+    width: 100%;
+    padding: 160px 8% 60px;
+    text-align: center;
+    background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.page-header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* ---------------- DESTAQUES (HOME) ---------------- */
+.highlights {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: var(--bg-alt);
+}
+
+.highlights h2 {
     text-align: center;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #FFFFFF;
     margin-bottom: 50px;
 }
 
-/* Container dos Cards */
+.highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.highlight-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 26px;
+    flex: 1 1 calc(33.333% - 25px);
+    min-width: 240px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.highlight-card .card-icon {
+    margin: 0 auto 20px;
+}
+
+.highlight-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.highlight-card a {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.highlight-card a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- SEÇÃO SOBRE ---------------- */
+#sobre {
+    width: 100%;
+    padding: 20px 8% 90px;
+    background-color: var(--bg);
+}
+
+.sobre-content {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sobre-content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.sobre-cta {
+    text-align: center;
+    margin-top: 44px;
+}
+
+/* ---------------- SEÇÃO SERVIÇOS ---------------- */
+#servicos {
+    width: 100%;
+    padding: 20px 8% 90px;
+    background-color: var(--bg);
+}
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -132,13 +269,12 @@ body {
     justify-content: center;
 }
 
-/* Estilo Base do Card */
 .card {
-    background-color: #082247; /* Azul encorpado exatamente como na imagem */
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 35px 28px;
-    flex: 1 1 calc(25% - 25px); /* Exibe até 4 cards por linha em telas bem grandes */
+    flex: 1 1 calc(25% - 25px);
     min-width: 270px;
     display: flex;
     flex-direction: column;
@@ -148,15 +284,14 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(56, 189, 248, 0.4);
+    border-color: rgba(168, 85, 247, 0.4);
 }
 
-/* Caixa do Ícone */
 .card-icon {
     width: 52px;
     height: 52px;
-    background-color: rgba(56, 189, 248, 0.12); /* Fundo sutil do ícone */
-    border: 1px solid rgba(56, 189, 248, 0.3);
+    background-color: var(--accent-soft);
+    border: 1px solid rgba(168, 85, 247, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -165,27 +300,25 @@ body {
 }
 
 .card-icon i {
-    color: #38BDF8; /* Cor do ícone em azul brilhante */
+    color: var(--accent);
     width: 26px;
     height: 26px;
 }
 
-/* Textos do Card */
 .card h3 {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
 .card p {
     font-size: 0.9rem;
-    color: #94A3B8;
+    color: var(--text-secondary);
     line-height: 1.5;
     margin-bottom: 24px;
 }
 
-/* Lista com o Check ✓ */
 .card ul {
     list-style: none;
     padding: 0;
@@ -202,7 +335,7 @@ body {
 }
 
 .card ul li span {
-    color: #818CF8; /* Cor azul/roxo do Check */
+    color: var(--accent);
     font-weight: bold;
 }
 
@@ -212,7 +345,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #22C55E; /* Verde vibrante igual à imagem */
+    background-color: var(--whatsapp);
     color: #FFFFFF;
     font-weight: 600;
     font-size: 0.95rem;
@@ -224,11 +357,212 @@ body {
 }
 
 .btn-whatsapp:hover {
-    background-color: #16A34A;
+    background-color: var(--whatsapp-hover);
     transform: scale(1.02);
 }
 
 .btn-whatsapp i {
     width: 18px;
     height: 18px;
+}
+
+/* ---------------- SEÇÃO CONTATO ---------------- */
+#contato {
+    width: 100%;
+    padding: 20px 8% 90px;
+    background-color: var(--bg);
+    text-align: center;
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-contato .btn-primary {
+    align-self: center;
+    margin-top: 8px;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    width: 100%;
+    padding: 60px 8% 0;
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--border);
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.footer-col p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent);
+}
+
+.footer-brand .logo-text {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: var(--accent-soft);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.footer-social i {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* ---------------- RESPONSIVO ---------------- */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 5%;
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 160px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-header {
+        padding: 140px 6% 40px;
+    }
+
+    #sobre,
+    #servicos,
+    #contato {
+        padding: 20px 6% 60px;
+    }
+
+    .highlights {
+        padding: 60px 6%;
+    }
+
+    .highlight-card,
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 50px 6% 0;
+    }
 }
